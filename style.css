@@ -1,0 +1,257 @@
+:root {
+    --text-color-dark: #121723;
+    --text-color-light-1: #FFFFFF;
+    --text-color-light-2: #A1A6B4;
+
+
+    --bg-dark: #121723;
+    --bg-light-1: #FFFFFF;
+    --bg-light-2: #F1F1F1;
+    --bg-light-3: #A1A6B4;
+    --bg-light-4-transparent: rgba(230, 232, 236, 40%);
+
+
+    --fs-2: 48px;
+    --fs-3: 26px;
+    --fs-4: 20px;
+    --fs-5: 16px;
+
+    --lh-2: 100%;
+    --lh-3: 26px;
+    --lh-4: 20px;
+    --lh-5: 16px;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --fs-2: 36px;
+        --fs-3: 22px;
+        --fs-4: 18px;
+        --fs-5: 14px;
+    
+        --lh-2: 100%;
+        --lh-3: 22px;
+        --lh-4: 18px;
+        --lh-5: 14px;
+    }
+}
+
+body * {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-light-2);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--bg-light-2);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-light-3);
+    border-radius: 5px;
+}
+
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--fs-2);
+    line-height: var(--lh-2);
+}
+
+h3 {
+    font-weight: 700;
+    font-size: var(--fs-3);
+    line-height: var(--lh-3);
+}
+
+.wrapper {
+    height: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 140px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 25px 0;
+}
+
+.section__title {
+    margin-bottom: 24px;
+
+    color: var(--text-color-dark);
+}
+
+.header {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--bg-light-3);
+}
+
+.header__content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: 60px;
+}
+
+.header__social {
+    gap: 24px;
+    list-style: none;
+}
+
+.header__social-link {
+    font-weight: 700;
+    font-size: var(--fs-4);
+    line-height: var(--lh-4);
+    color: var(--text-color-dark);
+}
+
+.products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.products__product {
+    align-content: start;
+
+    background-color: var(--bg-light-1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.products__image {
+    width: 100%;
+}
+
+.products__info {
+    padding: 32px 24px;
+    gap: 10px;
+}
+
+.products__name {
+    color: var(--text-color-dark);
+}
+
+.products__description {
+    font-size: var(--fs-4);
+    line-height: var(--lh-4);
+    color: var(--text-color-dark);
+}
+
+.footer {
+    padding: 32px 0 20px 0;
+
+    background-color: var(--bg-dark);
+}
+
+.footer__content {
+    gap: 18px;
+}
+
+.footer__top {
+    margin-bottom: 12px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    height: 24px;
+}
+
+.footer__social {
+    gap: 24px;
+    list-style: none;
+}
+
+.footer__social-link {
+    font-weight: 700;
+    font-size: var(--fs-4);
+    line-height: var(--lh-4);
+    color: var(--text-color-light-1);
+}
+
+.footer__separator {
+    height: 1px;
+
+    background-color: var(--bg-light-4-transparent);
+}
+
+.footer__copyright {
+    text-align: center;
+
+    font-size: var(--fs-5);
+    line-height: var(--lh-5);
+    color: var(--text-color-light-1);
+}
+
+@media (max-width: 1050px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer__top {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header__content {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
