@@ -42,7 +42,7 @@
 
     font-size: var(--fs-7);
     line-height: var(--lh-7);
-    color: var(--text-color-light-1);
+    color: var(--text-color-light-2);
 }
 
 @media (max-width: 750px) {
