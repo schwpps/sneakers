@@ -1,0 +1,35 @@
+.header {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--bg-light-3);
+    background-color: var(--bg-light-1);
+}
+
+.header__content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: 60px;
+}
+
+.header__social {
+    gap: 24px;
+    list-style: none;
+}
+
+.header__social-link {
+    font-weight: 700;
+    font-size: var(--fs-6);
+    line-height: var(--lh-6);
+    color: var(--text-color-dark);
+}
+
+@media (max-width: 600px) {
+    .header__content {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+}
